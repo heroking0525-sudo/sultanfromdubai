@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sultan From Dubai ~ [ دبئی سے سلطان ]</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="container">
+    <h2 class="title">🕌 Sultan From Dubai ~ [ دبئی سے سلطان ]</h2>
+    <p class="subs">48 704 subscribers</p>
+
+    <h3 class="welcome">WELCOME TO THE SULTAN FAMILY 👑</h3>
+    <p class="desc">🔥 Dubai Se Sultan Ka Farmaan 🔥</p>
+
+    <p class="telegram">Telegram Link 👇</p>
+
+    <button 
+    type="button" 
+    id="joinBtn" 
+    class="fade-btn"
+    onclick="window.location.href='https://t.me/+BeIsuIVIB7tjMWU1';"
+    >
+    JOIN [🕌 Sultan From Dubai ~ [ دبئی سے سلطان ]] CHANNEL
+    </button>
+
+    <div class="timer">
+      <span id="seconds">60</span> Seconds Left Only ⏳
+    </div>
+
+    <p class="disclaimer">
+      ⚠️ Disclaimer: We are not promoting gambling of any kind.  
+      This page is only for entertainment and informational purposes.
+    </p>
+  </div>
+
+  <script>
+    // Timer Countdown
+    let timeLeft = 60;
+    const seconds = document.getElementById("seconds");
+    const timer = setInterval(() => {
+      timeLeft--;
+      seconds.textContent = timeLeft;
+      if (timeLeft <= 0) clearInterval(timer);
+    }, 1000);
+
+    // Fade-in / Fade-out Button Animation
+    const btn = document.getElementById("joinBtn");
+    let opacity = 0, fadeIn = true;
+    setInterval(() => {
+      if (fadeIn) opacity += 0.05;
+      else opacity -= 0.05;
+      if (opacity >= 1) fadeIn = false;
+      if (opacity <= 0.2) fadeIn = true;
+      btn.style.opacity = opacity;
+    }, 100);
+  </script>
+</body>
+</html>
